@@ -1,0 +1,149 @@
+{% extends "jinja2/layout.html" %}
+
+{% block content %}  
+  <figure class="figure w-100 banner text-center">
+    <div class="banner-caption">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1 class=" wow fadeInUp">Enhancing Health Care</h1>
+            <p class="wow fadeInUp">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <div class="row m-0 wow fadeInUp">
+              <form class="w-100 mt-4">
+                <div class="search-outer">
+                  <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Search By Name
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                  </div>
+                  <input class="form-control" type="" name="" value="Search for drugs or pharmacy store">
+                </div>
+                <div class="search-btn">
+                  <button class="btn green-btn">SEARCH</button>
+                </div>
+              </form>
+            </div>
+            <div class="row ml-0 mr-0 wow fadeInUp">
+              <div class="col">
+                <button class="or-opt mt-5 mb-5">OR</button>
+              </div>
+            </div>
+            <div class="row m-0 wow fadeInUp">
+              <div class="col">
+                <button class="btn danger-btn mb-3"><i class="fa fa-ban"></i> Check Prohibited Drug</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <figure class="figure w-100 text-center create-account pt-5 pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h3 class="wow fadeInUp">People Visited at PresKribe</h3>
+          <p class="wow fadeInUp">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <ul>
+            <li class="wow fadeInLeft">
+              <span class="circle">520</span>
+              <p>Doctors</p>
+            </li>
+            <li class="wow fadeInUp">
+              <span class="circle">203</span>
+              <p>Pharmacists</p>
+            </li>
+            <li class="wow fadeInRight">
+              <span class="circle">1050</span>
+              <p>Others</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row wow fadeInUp">
+        <div class="col">
+          <button class="btn green-btn">CREATE ACCOUNT NOW</button>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <figure class="figure w-100 text-center companies pt-5 pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col mb-3">
+          <h3 class="wow fadeInUp">Leading Pharmaceutical Companies</h3>
+        </div>
+      </div>
+      <div class="row wow fadeInRight">
+        <div class="col">
+          <div class="owl-carousel owl-carousel1 owl-theme owl-loaded owl-drag">
+            <div class="item brand-col brand1">
+              <div class="brand-name">
+                <div class="brand-logo">
+                  <img src="static/images/cipla.png">
+                </div>
+                <div class="brand-info">
+                  <h4>Cipla</h4>
+                  <p class="white m-0">Caring for life</p>
+                  <p class="mt-2"><small>Best pharmaceutical Company in 2017</small></p>
+                </div>
+              </div>
+              <div class="brand-desc">
+                <p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small></p>
+              </div>
+              <div class="view-more-btn action-btn text-right">
+                <a class="btn blue-btn" href="">VIEW MORE</a>
+              </div>
+            </div>
+            <div class="item brand-col brand2">
+              <div class="brand-name">
+                <div class="brand-logo">
+                  <img src="static/images/ranbaxy.png">
+                </div>
+                <div class="brand-info">
+                  <h4>Ranbaxy</h4>
+                  <p class="white m-0">Laboratories limited</p>
+                  <p class="mt-2"><small>A Branch of Sun Pharma</small></p>
+                </div>
+              </div>
+              <div class="brand-desc">
+                <p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small></p>
+              </div>
+              <div class="view-more-btn action-btn text-right">
+                <a class="btn blue-btn" href="">VIEW MORE</a>
+              </div>
+            </div>
+            <div class="item brand-col brand2">
+              <div class="brand-name">
+                <div class="brand-logo">
+                  <img src="static/images/sanofi.png">
+                </div>
+                <div class="brand-info">
+                  <h4>SANOFI</h4>
+                  <p class="white m-0">Laboratories limited</p>
+                  <p class="mt-2"><small>Lorem ipsum dolor sit amet, consect</small></p>
+                </div>
+              </div>
+              <div class="brand-desc">
+                <p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small></p>
+              </div>
+              <div class="view-more-btn action-btn text-right">
+                <a class="btn blue-btn" href="">VIEW MORE</a>
+              </div>
+            </div>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </figure>
+{% endblock %}
+  

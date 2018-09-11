@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="static/css/custom.css">
+  <link rel="stylesheet" type="text/css" href="static/css/datepicker3.css">
+  <link rel="stylesheet" type="text/css" href="static/css/animate.css">
+  <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="static/js/bootstrap.bundle.min.js"></script> 
+
+  <script type="text/javascript" src="static/js/wow.min.js"></script>
+  <script type="text/javascript" src="static/js/bootstrap-datepicker.js"></script>
+  <script type="text/javascript" src="static/js/owl/owl.carousel.min.js" ></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+
+      // Date Picker For Forms Starts
+
+        $('.sandbox-container input').datepicker({
+            autoclose: true
+        });
+
+        $('.sandbox-container input').on('show', function(e){
+            console.debug('show', e.date, $(this).data('stickyDate'));
+            
+            if ( e.date ) {
+                 $(this).data('stickyDate', e.date);
+            }
+            else {
+                 $(this).data('stickyDate', null);
+            }
+        });
+
+        $('.sandbox-container input').on('hide', function(e){
+            console.debug('hide', e.date, $(this).data('stickyDate'));
+            var stickyDate = $(this).data('stickyDate');
+            
+            if ( !e.date && stickyDate ) {
+                console.debug('restore stickyDate', stickyDate);
+                $(this).datepicker('setDate', stickyDate);
+                $(this).data('stickyDate', null);
+            }
+        });
+
+      // Date Picker For Forms Ends
+
+      // Animation For Moving Content on Scroll Starts
+
+        wow = new WOW({
+              animateClass: 'animated',
+              offset:       100,
+              callback:     function(box) {
+                console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+              }
+            }
+          );
+          wow.init();
+
+        // Animation For Moving Content on Scroll Ends
+
+        // Sidebar Show Hide on Mobile Starts
+
+        if (window.matchMedia("(max-width: 991px)").matches) {
+          $('.db-left').addClass('sidebar-closed');
+          $('.sidebar-toggler').click(function(){
+            $('.db-left').toggleClass('sidebar-open').toggleClass('sidebar-closed');
+            $('body').toggleClass('add-overlay');
+          });
+
+          $( ".sidebar-toggler" ).insertBefore( $( ".user-photo" ) );
+        }
+      // Sidebar Show Hide on Mobile Ends
+    });     
+
+
+  </script>
+</head>
+<body class="admin-dashboard">
+  <header class="header pt-3 pb-3">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-auto col align-self-center wow fadeInLeft">
+          <a href="">
+            <img class="img-fluid logo" src="static/images/logo.png">
+          </a>
+        </div>
+        <div class="col text-right align-self-center header-info-area wow fadeInRight">
+          <ul>
+            <li class="notify-bell">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-bell"></i>
+                <span class="badge">1</span>
+              </a>
+              <div class="dropdown-menu">
+                <ul>
+                  <li class="dropdown-item media">
+                    <div class="media-left">
+                      <span class="notification-icon">
+                        <i class="fa fa-check bg-success"></i>
+                      </span>
+                    </div>
+                    <div class="media-body-custom">
+                      <h6 class="media-heading">Margaret Govan</h6>
+                      <p class="m-0">I like your portfolio, let's start.</p>
+                      <p class="m-0"><small>Today</small></p>
+                    </div>
+                  </li>
+                  <li class="dropdown-item media">
+                    <div class="media-left">
+                      <span class="notification-icon">
+                        <i class="fa fa-file bg-warning"></i>
+                      </span>
+                    </div>
+                    <div class="media-body-custom">
+                      <h6 class="media-heading">Margaret Govan</h6>
+                      <p class="m-0">I like your portfolio, let's start.</p>
+                      <p class="m-0"><small>Today</small></p>
+                    </div>
+                  </li>
+                  <li class="dropdown-item media">
+                    <div class="media-left">
+                      <span class="notification-icon">
+                        <i class="fa fa-minus bg-danger"></i>
+                      </span>
+                    </div>
+                    <div class="media-body-custom">
+                      <h6 class="media-heading">Margaret Govan</h6>
+                      <p class="m-0">I like your portfolio, let's start.</p>
+                      <p class="m-0"><small>Today</small></p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="msg-notify">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-envelope"></i>
+                <span class="badge">1</span>
+              </a>
+              <div class="dropdown-menu">
+                <ul>
+                  <li class="dropdown-item media">
+                    <div class="media-left">
+                      <span class="avatar avatar-sm avatar-online rounded-circle">
+                        <img class="img-fluid" src="static/images/user1.png" alt="avatar">
+                        <i></i>
+                      </span>
+                    </div>
+                    <div class="media-body-custom">
+                      <h6 class="media-heading">Margaret Govan</h6>
+                      <p class="m-0">I like your portfolio, let's start.</p>
+                      <p class="m-0"><small>Today</small></p>
+                    </div>
+                  </li>
+                  <li class="dropdown-item media">
+                    <div class="media-left">
+                      <span class="avatar avatar-sm avatar-busy rounded-circle">
+                        <img class="img-fluid" src="static/images/user1.png" alt="avatar">
+                        <i></i>
+                      </span>
+                    </div>
+                    <div class="media-body-custom">
+                      <h6 class="media-heading">Margaret Govan</h6>
+                      <p class="m-0">I like your portfolio, let's start.</p>
+                      <p class="m-0"><small>Today</small></p>
+                    </div>
+                  </li>
+                  <li class="dropdown-item media">
+                    <div class="media-left">
+                      <span class="avatar avatar-sm avatar-away rounded-circle">
+                        <img class="img-fluid" src="static/images/user1.png" alt="avatar">
+                        <i></i>
+                      </span>
+                    </div>
+                    <div class="media-body-custom">
+                      <h6 class="media-heading">Margaret Govan</h6>
+                      <p class="m-0">I like your portfolio, let's start.</p>
+                      <p class="m-0"><small>Today</small></p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="settings-icon">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-cog"></i>
+              </a>
+            </li>
+            <li class="user-profile">
+              <div class="dropdown logged-in-user">
+                <div class="dropdown-toggle" data-toggle="dropdown">
+                  <img src="static/images/user1.png">
+                  <i class="fa fa-user desktop-hidden"></i>
+                  <span class="adminname">Kevin</span>
+                </div>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#"><i class="fa fa-user"></i>&nbsp; &nbsp; Edit Profile</a>
+                  <a class="dropdown-item" href="#"><i class="fa fa-envelope"></i>&nbsp; &nbsp; My Inbox</a>
+                  <a class="dropdown-item" href="#"><i class="fa fa-comments-o"></i>&nbsp; &nbsp; Chats</a>
+                  <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i>&nbsp; &nbsp; Tasks</a>
+                  <a class="dropdown-item" href="#"><i class="fa fa-power-off"></i>&nbsp; &nbsp; Logout</a>
+                </div>
+              </div> 
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row desktop-hidden sidebar-toggler m-0">
+        <i class="fa fa-bars white w-100"></i>
+      </div>
+    </div>
+  </header>
+
+  {% block content %}{% endblock %}
+
+  <footer class="footer pt-3 pb-3">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col align-self-center">
+          <p class="white m-0">&copy; 2018 PresKribe, powered by Fastrust Nigeria Limited. All rights reserved</p>
+        </div>
+        <div class="col text-right align-self-center">
+          <ul class="social">
+            <li>
+              <a href="">
+                <i class="fa fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa fa-instagram"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+  <div id="loginModal" class="modal fade custom-popup" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h4>Sign In To PresKriber</h4>
+                  <p>Enter your details below</p>
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+              </div>
+              <div class="modal-body">
+                  <form class="form pt-5 pb-2" role="form" autocomplete="off" id="formLogin" novalidate="" method="POST">
+                      <div class="form-group">
+                          <input type="text" class="form-control form-control-lg" name="" id="" placeholder="Email Address">
+                      </div>
+                      <div class="form-group">
+                          <input type="password" class="form-control form-control-lg" id="" required="" autocomplete="new-password" placeholder="Password">
+                      </div>
+                      <div class="form-group action-btn">
+                          <button type="submit" class="btn green-btn w-100" id="btnLogin">Login</button>
+                      </div>
+                      <div class="form-group text-center">
+                        <p class="m-0">Forgot Password?</p>
+                      </div>
+                      <div class="form-group m-0 text-center">
+                        <p class="m-0">Don't have an account? <a href="">Create Now!</a></p>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div id="signupModal" class="modal fade custom-popup" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h4>Sign Up For The New Account</h4>
+                  <p>Enter your details below</p>
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+              </div>
+              <div class="modal-body">
+                  <form class="form py-5" role="form" autocomplete="off" id="formLogin" novalidate="" method="POST">
+                      <div class="form-group">
+                          <input type="text" class="form-control form-control-lg" name="" id="" placeholder="Username">
+                      </div>
+                      <div class="form-group">
+                          <input type="text" class="form-control form-control-lg" name="" id="" placeholder="Email Address">
+                      </div>
+                      <div class="form-group">
+                          <input type="password" class="form-control form-control-lg" id="" required="" autocomplete="new-password" placeholder="Password">
+                      </div>
+                      <div class="form-group">
+                          <input type="password" class="form-control form-control-lg" id="" required="" autocomplete="new-password" placeholder="Confirm Password">
+                      </div>
+                      <div class="form-group action-btn">
+                          <button type="submit" class="btn green-btn w-100" id="btnLogin">Sign Up</button>
+                      </div>
+                      <div class="form-group m-0 text-center">
+                        <p class="m-0">By clicking the Sign Up button, you agree to our<br><a href="">Terms & Conditions</a> and <a href="">Privacy policy.</a></p>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>

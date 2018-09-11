@@ -34,7 +34,6 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.staticfiles',
-    'myapp'
 ]
 
 MIDDLEWARE = [
@@ -57,31 +56,29 @@ ROOT_URLCONF = 'jinja_httpstream.urls'
 # ]
 
 TEMPLATES = [
-{
-    'BACKEND': 'django.template.backends.jinja2.Jinja2',
-    'DIRS': [os.path.join(BASE_DIR, 'myapp/templates')],
-    'APP_DIRS': True,
-    'OPTIONS': {'environment': 'jinja_httpstream.jinja2.Environment', },
-},
-{
-    'BACKEND': 'django.template.backends.django.DjangoTemplates',
-    'DIRS': [],
-    'APP_DIRS': True,
-    'OPTIONS': {
-        'context_processors': [
-            'django.contrib.auth.context_processors.auth',
-            'django.template.context_processors.debug',
-            'django.template.context_processors.i18n',
-            'django.template.context_processors.media',
-            'django.template.context_processors.static',
-            'django_jinja.builtins.extensions.StaticFilesExtension',
-            'django.template.context_processors.tz',
-            'django.contrib.messages.context_processors.messages',
-        ],
+    {
+        'BACKEND': 'django.template.backends.jinja2.Jinja2',
+        'DIRS': [os.path.join(BASE_DIR, 'myapp/templates')],
+        'APP_DIRS': True,
+        'OPTIONS': {'environment': 'jinja_httpstream.jinja2.Environment', },
     },
-},
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.contrib.auth.context_processors.auth',
+                'django.template.context_processors.debug',
+                'django.template.context_processors.i18n',
+                'django.template.context_processors.media',
+                'django.template.context_processors.static',
+                'django.template.context_processors.tz',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
 ]
-
 
 
 WSGI_APPLICATION = 'jinja_httpstream.wsgi.application'
@@ -124,4 +121,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = "/var/www/html/jinjatest/jinja_httpstream/myapp/static/"
+STATIC_ROOT = '/var/www/html/jinjatest/jinja_httpstream/myapp/static'

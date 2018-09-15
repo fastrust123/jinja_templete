@@ -1,0 +1,30 @@
+{% extends "jinja2/layout/admin-layout.html" %}
+
+{% block content %}
+	<div class="db-content">
+		<div class="row m-0">
+			<div class="col py-3 px-4 head-sec">
+				<h5 class="wow fadeInUp">Verify Prescription</h5>
+				<p class="m-0 lighter-color wow fadeInUp">Enter the drug prescription code into the input field, and click the submit button to view the prescription.</p>
+			</div>
+		</div>
+		<div class="row m-0 px-4 pt-2">
+			<div class="col p-0">
+				<form class="mt-5 add-official wow fadeInUp">
+					<div class="row">
+						<div class="col-lg-6 col-xs-12 col-sm-6">
+							<div class="form-group m-0">
+	                        	<input type="text" class="form-control form-control-lg" name="" id="" placeholder="Prescription Code">
+	                        </div>
+	                    </div>
+	                    <div class="col-lg-6 col-xs-12 col-sm-6">
+							<div class="form-group m-0 action-btn">
+	                        	<button class="btn green-btn">SUBMIT</button>
+	                        </div>
+	                    </div>
+	                </div>
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "jinja2/layout/admin-layout.html" %}
+
+{% block content %}
+	<div class="db-content">
+		<div class="row m-0">
+			<div class="col py-3 px-4 head-sec">
+				<h5 class="wow fadeInUp">View Prescription</h5>
+				<p class="m-0 lighter-color wow fadeInUp">This displays the last 10 drug prescription of the patient. To use this functionality, use the "Request Permission" functionality first to get a secret code.</p>
+			</div>
+		</div>
+		<div class="row m-0 px-4 pt-2">
+			<div class="col p-0">
+				<form class="mt-5 add-official wow fadeInUp">
+					<div class="row">
+						<div class="col-lg-6 col-xs-12 col-sm-6">
+							<div class="form-group">
+	                        	<input type="text" class="form-control form-control-lg" name="" id="" placeholder="Secret code">
+	                        </div>
+	                    </div>
+	                    <div class="col-lg-6 col-xs-12 col-sm-6">
+	                    	<div class="form-group m-0 action-btn">
+	                        	<button class="btn green-btn">SUBMIT</button>
+	                        </div>
+	                    </div>
+	                </div>
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}

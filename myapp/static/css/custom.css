@@ -444,6 +444,11 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
+body.admin-dashboard .user-menu ul li.active a.wow.fadeInLeft {
+    pointer-events: none;
+    cursor: default;
+}
+
 .container {
   width: 100%;
   padding-right: 15px;
